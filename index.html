@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Birthday Surprise</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main id="app">
+    <!-- 1. PASSCODE -->
+    <section class="scene active" id="scene-passcode" aria-label="Passcode">
+      <div class="passcode-wrap">
+        <div class="polaroid-wrap">
+          <span class="bow">🎀</span>
+          <figure class="polaroid">
+            <img src="assets/polaroid_photo.jpg" alt="Birthday memory" />
+            <figcaption>Happy My Girl Day!</figcaption>
+          </figure>
+        </div>
+
+        <div class="lock-panel">
+          <div class="lock-icon">🔒</div>
+          <p class="eyebrow">ENTER A PASSCODE</p>
+          <div class="code-dots" id="codeDots" aria-label="Passcode progress"></div>
+          <div class="keypad" id="keypad"></div>
+          <p class="hint">psst… try a special date ♡</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. DATE SUCCESS -->
+    <section class="scene red-scene" id="scene-date">
+      <canvas class="confetti" id="confettiCanvas"></canvas>
+      <div class="date-success">
+        <div class="sparkle">✦</div>
+        <h1 id="dateDisplay">01/10/26</h1>
+        <p>the date that started something special</p>
+      </div>
+    </section>
+
+    <!-- 3. LOADING - 100% HTML/CSS, no loading.jpg -->
+    <section class="scene loading-scene" id="scene-loading">
+      <span class="loading-doodle doodle-a">♡</span>
+      <span class="loading-doodle doodle-b">✦</span>
+      <span class="loading-doodle doodle-c">✿</span>
+      <span class="loading-doodle doodle-d">⌁</span>
+      <div class="loading-card">
+        <div class="mini-cake" aria-hidden="true">
+          <span class="mini-flame f1"></span><span class="mini-flame f2"></span><span class="mini-flame f3"></span>
+          <div class="mini-candle-row"><i></i><i></i><i></i></div>
+          <div class="mini-frosting"></div>
+          <div class="mini-cake-body"></div>
+        </div>
+        <h2>Hey you! ♡</h2>
+        <p>Loading your surprise...</p>
+        <div class="loader"><span id="loaderFill"></span></div>
+        <small id="loaderText">0%</small>
+      </div>
+    </section>
+
+    <!-- 4. ENVELOPE - 100% HTML/CSS, no envelope.jpg -->
+    <section class="scene envelope-scene" id="scene-envelope">
+      <div class="paper-card envelope-card">
+        <p class="tiny-kicker">A LITTLE SOMETHING FOR YOU</p>
+        <h2>Happy My Girl Day!</h2>
+
+        <div class="envelope-wrap" aria-label="Birthday envelope illustration">
+          <div class="envelope-shell">
+            <div class="envelope-back"></div>
+            <div class="envelope-letter-peek">for you ♡</div>
+            <div class="envelope-left"></div>
+            <div class="envelope-right"></div>
+            <div class="envelope-front"></div>
+            <button class="wax-seal" id="openEnvelope" aria-label="Open envelope">
+              <span>♡</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="tap-note">tap the wax seal</div>
+    </section>
+
+    <!-- 5. HERO - HTML/CSS + editable SVG asset, no hero.jpg -->
+    <section class="scene hero-scene" id="scene-hero">
+      <img class="hero-art" src="assets/hero-couple.jpg" alt="Editable illustrated birthday scene" />
+      <div class="hero-vignette"></div>
+      <div class="hero-copy">
+        <p class="hero-date" id="heroDate">01 · 10 · 26</p>
+        <h1>Happy My Girl Day <span id="heroName">Baby!</span></h1>
+        <p class="hero-message">I hope this little gift will make you happy.<br>This gift is the one love — thoughtful, simple, and made just for you. ♡</p>
+        <button class="hero-button" id="readLetter">✉ Read Your Letter</button>
+      </div>
+      <span class="hero-spark s1">✦</span><span class="hero-spark s2">♡</span><span class="hero-spark s3">✦</span>
+    </section>
+
+    <!-- 6. LETTER - HTML/CSS + editable SVG assets, no letter.jpg -->
+    <section class="scene letter-scene" id="scene-letter">
+      <span class="letter-heart h1">♡</span><span class="letter-heart h2">♡</span>
+      <div class="letter-layout">
+        <article class="letter-paper">
+          <div class="zigzag top-zigzag"></div>
+          <p class="letter-kicker">HAPPY</p>
+          <h2>My Girl Day</h2>
+          <div class="letter-text">
+            <p>HAPPY NATIONAL GIRLFRIEND DAY SAYANGKUUU, SANG RATU DI HIKAYAT HIDUPKUUU 👑💖✨🌸</p>
+            <p>bidadari tercantikkuuu, penyejuk hatikuuu, pelita kegelapankuuu, es teler segar di siang bolongkuuu 🍧🍧, cewek nomor satu terfavorit se-alam semesta 🌟🥰😍</p>
+            <p>Selamat memperingati harinya cewek-cewek paling spesial, dan buat aku... KAMULAH SATU-SATUNYA YANG PALING SPESIAL DARI YANG PALING SPESIAL! 💖✨ Makasih banyak yaaa udah hadir di hidup aku, udah selalu sabar, udah nemenin dari hal-hal seru sampai hal-hal konyol, dan selalu bikin hari-hariku terasa jauh lebih berwarna & penuh kebahagiaan 🌈💐💗.</p>
+            <p>Di hari Girlfriend Day ini, ada beberapa instruksi wajib yang harus dipatuhi Ibu Negara:
+1️⃣ Kamu HARUS makin bahagia hari ini & seterusnya 🥳💖
+2️⃣ Jangan lupa MAM makanan favoritmu 🍗 Pizza/seblak/bakso mari kita sikat!
+3️⃣ Jangan lupa MIM🧋🥤
+4️⃣ Jangan lupa NAFAS biar tetep terpesona liat aku 🫁💨
+5️⃣ Dan yang PENTING BANGET... Ingat kalau kamu itu sangat amat dicintai, dihargai, dan dibanggakan sama aku setiap detik! AWCHHH WKWKWK 🙈💥💖💘.</p>
+            <p class="letter-sign">Terima kasih udah jadi girlfriend paling luar biasa, paling gemes, dan paling pengertian! I love you so much, more than words can say, today, tomorrow, and forever! 💖🔥💘✨🎉</p>
+          </div>
+          <div class="zigzag bottom-zigzag"></div>
+        </article>
+
+        <div class="memory-stack" aria-label="Editable memory illustrations">
+          <figure class="memory-photo p1"><img src="assets/memory-1.jpg" alt="Editable memory illustration one"><figcaption>our little moments</figcaption></figure>
+          <figure class="memory-photo p2"><img src="assets/memory-2.jpg" alt="Editable memory illustration two"><figcaption>soft days</figcaption></figure>
+          <figure class="memory-photo p3"><img src="assets/memory-3.jpg" alt="Editable memory illustration three"><figcaption>always us</figcaption></figure>
+        </div>
+      </div>
+      <button class="continue-button" id="goCake">one more little surprise →</button>
+    </section>
+
+    <!-- 7. CAKE -->
+    <section class="scene cake-scene" id="scene-cake">
+      <canvas id="fireworks"></canvas>
+      <div class="wish-title" id="wishTitle">Make a Wish ✨</div>
+
+      <button class="cake" id="cake" aria-label="Birthday cake">
+        <div class="candles">
+          <span><i></i></span><span><i></i></span><span><i></i></span>
+        </div>
+        <div class="frosting"></div>
+        <div class="cake-body" id="cakeBody">
+          <b class="eye left"></b><b class="eye right"></b><b class="mouth"></b>
+        </div>
+      </button>
+
+      <div class="cake-controls" id="cakeControls">
+        <button id="blowCandles" class="pill accent">Blow the Candles ✨</button>
+      </div>
+
+      <label class="color-wheel" title="Change cake color">
+        <input type="color" id="cakeColor" value="#f6d86f" />
+      </label>
+
+      <button class="reset-btn" id="resetBtn">↻ Replay</button>
+      <p class="cake-hint" id="cakeHint">tap the cake ♡</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
